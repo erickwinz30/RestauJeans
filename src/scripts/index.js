@@ -1,19 +1,20 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import main from './view/main';
-
-const hamburgerButtonElement = document.querySelector('#hamburger');
-const drawerElement = document.querySelector('#drawer');
-const mainElement = document.querySelector('main');
+import App from './view/app';
 
 document.addEventListener('DOMContentLoaded', main);
 
-hamburgerButtonElement.addEventListener('click', event => {
-    drawerElement.classList.toggle('open');
-    event.stopPropagation();
+const app = new App({
+  button: document.querySelector('#hamburger'),
+  drawer: document.querySelector('#drawer'),
+  content: document.querySelector('#mainContent'),
 });
 
-mainElement.addEventListener('click', event => {
-    drawerElement.classList.remove('open');
-    event.stopPropagation();
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
 });

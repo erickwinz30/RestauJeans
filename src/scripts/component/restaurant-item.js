@@ -1,15 +1,16 @@
+/* eslint-disable no-useless-constructor */
 class RestaurantItem extends HTMLElement {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    set restaurant(restaurants) {
-        this._restaurants = restaurants;
-        this.render();
-    }
+  set restaurant(restaurants) {
+    this._restaurants = restaurants;
+    this.render();
+  }
 
-    render() {
-        this.innerHTML = `
+  render() {
+    this.innerHTML = `
         
             <article class="post-item" tabindex="0" id="maincontent">
                 <img class="post-item_thumbnail" src="${this._restaurants.pictureId}"
@@ -22,7 +23,7 @@ class RestaurantItem extends HTMLElement {
                 </div>
             </article>
         `;
-    }
+  }
 }
 
 customElements.define('restaurant-item', RestaurantItem);

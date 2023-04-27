@@ -1,13 +1,14 @@
+/* eslint-disable import/extensions */
 import './restaurant-item.js';
 
 class RestaurantList extends HTMLElement {
-    set restaurants(restaurants) {
-        this._restaurants = restaurants;
-        this.render();
-    }
+  set restaurants(restaurants) {
+    this._restaurants = restaurants;
+    this.render();
+  }
 
-    renderError(message) {
-        this.innerHTML = `
+  renderError(message) {
+    this.innerHTML = `
           <style>
             .placeholder {
               font-weight: lighter;
@@ -19,17 +20,17 @@ class RestaurantList extends HTMLElement {
             }
           </style>
           <h2 class="placeholder">${message}</h2>`;
-      }
+  }
 
-    render() {
-        this.innerHTML = '';
-        this._restaurants.forEach(restaurant => {
-            const restaurantItemElement = document.createElement('restaurant-item');
-            restaurantItemElement.restaurant = restaurant;
+  render() {
+    this.innerHTML = '';
+    this._restaurants.forEach((restaurant) => {
+      const restaurantItemElement = document.createElement('restaurant-item');
+      restaurantItemElement.restaurant = restaurant;
 
-            this.appendChild(restaurantItemElement);
-        });
-    }
+      this.appendChild(restaurantItemElement);
+    });
+  }
 }
 
 customElements.define('restaurant-list', RestaurantList);
