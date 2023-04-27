@@ -1,10 +1,10 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'src/scripts/index.js')
+    app: path.resolve(__dirname, 'src/scripts/index.js'),
     // sw: path.resolve(__dirname, 'src/scripts/sw.js'),
   },
   output: {
@@ -22,6 +22,9 @@ module.exports = {
           },
           {
             loader: 'css-loader',
+          },
+          {
+            loader: 'sass-loader',
           },
         ],
       },
