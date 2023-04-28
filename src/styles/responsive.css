@@ -1,0 +1,193 @@
+@media screen and (min-width: 0px) {
+    #drawer {
+        width: 80%;
+        height: 500px;
+        position: absolute;
+        transform: translate(-2000px, 0);
+        transition: transform 0.3s ease-in-out;
+        background-color: white;
+    }
+
+    #drawer.open {
+        transform: translate(0, 0)
+    }
+
+    #drawer ul {
+        display: grid;
+        height: 100%;
+        align-items: center;
+        place-items: center;
+    }
+
+    #drawer li {
+        padding: 5px 0px;
+        text-align: center;
+    }
+
+    #drawer a {
+        text-decoration: none;
+        font-size: 36px;
+        color: black;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #hamburger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        text-decoration: none;
+        color: black;
+        width: 44px;
+        height: 44px;
+        border: none;
+        background: none;
+    }
+
+    .posts {
+        grid-template-columns: 1fr;
+    }
+
+    .restaurant {
+        grid-template-columns: auto 1fr;
+    }
+
+    .restaurant .restaurant_title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .restaurant .restaurant_overview {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    #drawer {
+        position: relative;
+        transform: translate(0, 0);
+        width: 100%;
+        height: 80px;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #drawer a {
+        font-weight: 500;
+        font-size: 36px;
+    }
+
+    #drawer ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        min-width: 44px;
+        min-height: 44px;
+        align-items: center;
+        place-items: center;
+    }
+
+    #drawer li {
+        place-items: center;
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .nav_item {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 24%;
+        text-align: center;
+        line-height: 24px;
+        padding: 24px;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+
+    .nav_item {
+        padding: 0px 0px;
+    }
+
+    /* .restaurant-item {
+        margin: 32px auto auto;
+        text-align: left;
+        overflow: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .restaurant-item_description {
+        margin-top: 16px;
+        font-size: 18px;
+        line-height: 1.5em;
+    } */
+
+    .posts {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    main {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    .posts {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .list-item {
+        margin: 32px auto auto;
+        text-align: left;
+        overflow: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* .post-item_description {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 1.5em;
+    } */
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        display: flex;
+        align-items: center;
+        min-height: 380px;
+        width: 1200px;
+        text-align: center;
+        background-image: url("../public/images/heros/hero-image_2.jpg");
+        background-position: center;
+        background-color: green;
+        margin: 0 auto;
+    }
+
+    #drawer {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    main {
+        width: 1200px;
+        margin: 0 auto;
+    }
+}

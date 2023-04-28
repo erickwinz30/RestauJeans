@@ -1,4 +1,7 @@
 /* eslint-disable no-useless-constructor */
+
+import CONFIG from '../globals/config';
+
 class RestaurantItem extends HTMLElement {
   constructor() {
     super();
@@ -11,9 +14,8 @@ class RestaurantItem extends HTMLElement {
 
   render() {
     this.innerHTML = `
-        
             <article class="post-item" tabindex="0" id="maincontent">
-                <img class="post-item_thumbnail" src="${this._restaurants.pictureId}"
+                <img class="post-item_thumbnail" src="${CONFIG.BASE_IMAGE_SMALL_URL}"
               alt="Restaurant ${this._restaurants.name}">
                 <div class="post-item_content">
                     <h1 class="post-item_title">${this._restaurants.name}</h1>

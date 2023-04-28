@@ -1,4 +1,5 @@
 import RestaurantSource from '../../data/restaurant-source';
+import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -6,8 +7,7 @@ const Home = {
         <section class="content">
             <div class="latest">
                 <h1 class="latest_label" tabindex="0">Explore Restaurant</h1>
-                <div class="posts">
-                    <restaurant-list class="list-item"></restaurant-list>
+                <div class="posts" id="posts">
                 </div>
             </div>
         </section>
@@ -16,7 +16,11 @@ const Home = {
 
   async afterRender() {
     const restaurants = await RestaurantSource.homeRestaurant();
-    console.log(restaurants);
+    const restaurantContainer = document.querySelector('#posts');
+    restaurants.forEach((restaurant) => {
+      restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+    });
+    // console.log(restaurants);
 
     // TODO: tampilkan movies di dalam DOM
   },
