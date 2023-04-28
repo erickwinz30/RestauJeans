@@ -227,6 +227,28 @@ main {
   -webkit-box-orient: vertical;
 }
 
+/*
+    Restaurant Detail
+  */
+
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+.restaurant .restaurant_poster {
+  width: 100%;
+  max-width: 400px;
+}
+
+.restaurant .restaurant_info h4 {
+  margin: 8px 0;
+}
+
 footer {
   background-color: black;
   padding: 2em;
