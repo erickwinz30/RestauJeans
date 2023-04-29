@@ -55,6 +55,11 @@
 
     .restaurant {
         grid-template-columns: auto 1fr;
+        overflow: auto;
+    }
+
+    .restaurant_info {
+        float: center;
     }
 
     .restaurant .restaurant_title {
@@ -115,19 +120,13 @@
         padding: 0px 0px;
     }
 
-    /* .restaurant-item {
-        margin: 32px auto auto;
-        text-align: left;
-        overflow: auto;
+    .restaurant {
+        margin: 32px auto;
+        width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto 1fr;
+        gap: 18px 16px;
     }
-
-    .restaurant-item_description {
-        margin-top: 16px;
-        font-size: 18px;
-        line-height: 1.5em;
-    } */
 
     .posts {
         grid-template-columns: 1fr 1fr;
