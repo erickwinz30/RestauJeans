@@ -30,6 +30,18 @@ const createRestaurantDetailTemplate = (restaurant) => `
         <h3>Overview</h3>
         <p>${restaurant.description}</p>
     </div>
+    <div class="restaurant_menus">
+        <h3>Foods</h3>
+            <ul>
+                ${restaurant.menus.foods.map((food) => `<li>${food.name}</li>`).join('')}
+            </ul>
+        <h3>Drinks</h3>
+            <ul>
+                ${restaurant.menus.drinks.map((drink) => `<li>${drink.name}</li>`).join('')}
+            </ul>
+    </div>
+    <div class="restaurant_drink">
+    </div>
 `;
 
 const createLikeButtonTemplate = () => `
