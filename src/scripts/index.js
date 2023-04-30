@@ -4,8 +4,6 @@ import '../styles/responsive.css';
 import App from './view/app';
 import swRegister from './utils/sw-register';
 
-document.addEventListener('DOMContentLoaded', main);
-
 const app = new App({
   button: document.querySelector('#hamburger'),
   drawer: document.querySelector('#drawer'),
