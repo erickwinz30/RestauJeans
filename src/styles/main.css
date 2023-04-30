@@ -249,6 +249,51 @@ main {
   font-size: 32px;
 }
 
+.restaurant_menus {
+  margin: 16px;
+  padding: 10px;
+  width: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.restaurant_drink {
+  margin: 16px;
+  padding: 10px;
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,.2); */
+  width: auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.restaurant_menus h3 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.restaurant_menus ul {
+  margin: 10px;
+}
+
+.restaurant_drink ul {
+  margin: 10px;
+}
+
+.restaurant_review h3 {
+  font-size: 20px;
+}
+
+.review_item {
+  margin: 16px;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+  width: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  display: block;
+}
+
 /*
   Like
 */
@@ -258,17 +303,18 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #db0000;
-  
+  background-color: #000000;
+
   position: fixed;
   bottom: 16px;
   right: 16px;
   border-radius: 50%;
-  border: 0;
-  
+  border: 1;
+
   font-size: 18px;
   color: white;
   cursor: pointer;
+  border-color: #fff;
 }
 
 footer {

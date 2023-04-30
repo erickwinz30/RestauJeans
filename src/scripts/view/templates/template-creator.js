@@ -32,16 +32,28 @@ const createRestaurantDetailTemplate = (restaurant) => `
     </div>
     <div class="restaurant_menus">
         <h3>Foods</h3>
+        <br>
             <ul>
                 ${restaurant.menus.foods.map((food) => `<li>${food.name}</li>`).join('')}
             </ul>
+    </div>
+    <div class="restaurant_drink">
         <h3>Drinks</h3>
+        <br>
             <ul>
                 ${restaurant.menus.drinks.map((drink) => `<li>${drink.name}</li>`).join('')}
             </ul>
     </div>
-    <div class="restaurant_drink">
-    </div>
+    <div class="restaurant_review">
+        <h3>Customer Review</h3>
+        <br>
+        ${restaurant.customerReviews.map((review) => `
+            <div class="review_item">
+                <h4>by ${review.name} on ${review.date}</h4>
+                <p>${review.review}</p>
+            </div>
+        `).join('')}
+    </div
 `;
 
 const createLikeButtonTemplate = () => `
