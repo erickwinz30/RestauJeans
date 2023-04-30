@@ -3,6 +3,7 @@ import '../styles/main.css';
 import '../styles/responsive.css';
 import main from './view/main';
 import App from './view/app';
+import swRegister from './utils/sw-register';
 
 document.addEventListener('DOMContentLoaded', main);
 
@@ -18,4 +19,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
