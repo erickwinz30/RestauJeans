@@ -22,10 +22,11 @@ const Detail = {
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant: {
         id: restaurant.id,
-        title: restaurant.name,
-        overview: restaurant.description,
-        backdrop_path: restaurant.address,
-        vote_average: restaurant.rating,
+        name: restaurant.name,
+        description: restaurant.description,
+        pictureId: restaurant.pictureId,
+        address: restaurant.address,
+        rating: restaurant.rating,
       },
     });
 

@@ -20,9 +20,6 @@ const Home = {
     restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });
-    // console.log(restaurants);
-
-    // TODO: tampilkan movies di dalam DOM
   },
 };
 
