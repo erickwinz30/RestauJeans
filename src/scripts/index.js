@@ -22,8 +22,7 @@ window.addEventListener('load', () => {
   swRegister();
 });
 
-skipToContent.addEventListener('keypress', (event) => {
-  if (event.key === 'Enter') {
-    maincontent.focus();
-  }
+skipToContent.addEventListener('click', (event) => {
+  event.preventDefault();
+  maincontent.focus();
 });
