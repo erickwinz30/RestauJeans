@@ -4,13 +4,14 @@ class FavoriteRestaurantSearchView {
   // eslint-disable-next-line class-methods-use-this
   getTemplate() {
     return `
-        <div class="content">
-        <input id="query" type="text">
-        <h2 class="content_heading">Your Liked Restaurant</h2>
-          <div id="restaurants" class="restaurants">
+      <section class="content">
+      <input id="query" type="text">
+        <div class="latest">
+        <h1 class="latest_label" tabindex="0">Your Liked Restaurant</h1>
+          <div class="posts" id="posts">
           </div>
         </div>
-      </div>
+      </section>
       `;
   }
 
@@ -31,9 +32,9 @@ class FavoriteRestaurantSearchView {
       html = this._getEmptyRestaurantTemplate();
     }
 
-    document.getElementById('restaurants').innerHTML = html;
+    document.getElementById('posts').innerHTML = html;
 
-    document.getElementById('restaurants').dispatchEvent(new Event('restaurants:updated'));
+    document.getElementById('posts').dispatchEvent(new Event('posts:updated'));
   }
 
   // eslint-disable-next-line class-methods-use-this
