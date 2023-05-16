@@ -29,7 +29,6 @@ class FavoriteRestaurantSearchPresenter {
 
   // eslint-disable-next-line class-methods-use-this
   _showFoundRestaurants(restaurants) {
-    console.log(restaurants);
     this._view.showFavoriteRestaurants(restaurants);
   }
 

@@ -63,7 +63,6 @@ describe('Searching Restaurants', () => {
     it('should show the name of the restaurants found by Favorite Restaurants', (done) => {
       document.getElementById('posts').addEventListener('posts:updated', () => {
         const restaurantTitles = document.querySelectorAll('.restaurant_title');
-        // console.log(restaurantTitles);
         expect(restaurantTitles.item(0).textContent).toEqual('film abc');
         expect(restaurantTitles.item(1).textContent).toEqual('ada juga film abcde');
         expect(restaurantTitles.item(2).textContent).toEqual('ini juga boleh film a');

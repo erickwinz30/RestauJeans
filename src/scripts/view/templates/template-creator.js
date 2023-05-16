@@ -10,8 +10,8 @@ const createRestaurantItemTemplate = (restaurant) => `
     </div>
     </div>
     <div class="restaurant-item_content">
-    <h3 class="restaurant_title"><a href="/#/detail/${restaurant.id}">${restaurant.name}</a></h3>
-    <p>${restaurant.description}</p>
+    <h3 class="restaurant_title"><a href="/#/detail/${restaurant.id}">${restaurant.name || '-'}</a></h3>
+    <p>${restaurant.description || '-'}</p>
     </div>
     </div>
 `;

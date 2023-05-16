@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import FavoriteRestaurantIdb from '../src/scripts/data/favorite-restaurant-idb';
 import * as TestFactories from './helpers/testFactories';
 
@@ -17,7 +18,7 @@ describe('Unliking a Restaurant', () => {
 
   it('should display unlike widget when the restaurant has been liked', async () => {
     await TestFactories.createLikeButtonPresenterWithMovie({ id: 1 });
- 
+
     expect(document.querySelector('[aria-label="unlike this restaurant"]')).toBeTruthy();
   });
 

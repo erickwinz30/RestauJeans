@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-new */
 import FavoriteRestaurantIdb from '../../data/favorite-restaurant-idb';
 import FavoriteRestaurantSearchView from './liked-restaurants/favorite-restaurant-search-view';
@@ -12,8 +13,16 @@ const Favorite = {
   },
 
   async afterRender() {
-    new FavoriteRestaurantShowPresenter({ view, favoriteMovies: FavoriteRestaurantIdb });
-    new FavoriteRestaurantSearchPresenter({ view, favoriteMovies: FavoriteRestaurantIdb });
+    // const restaurants = await FavoriteRestaurantIdb.getAllRestaurants();
+    // const restaurantsContainer = document.querySelector('#posts');
+
+    // restaurants.forEach((restaurant) => {
+    //   // eslint-disable-next-line no-undef
+    //   restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+    // });
+
+    new FavoriteRestaurantShowPresenter({ view, favoriteRestaurants: FavoriteRestaurantIdb });
+    new FavoriteRestaurantSearchPresenter({ view, favoriteRestaurants: FavoriteRestaurantIdb });
   },
 };
 

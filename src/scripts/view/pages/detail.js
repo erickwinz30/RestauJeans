@@ -6,7 +6,7 @@ import { createRestaurantDetailTemplate } from '../templates/template-creator';
 const Detail = {
   async render() {
     return `
-      <div id="content" class="restaurant"></div>
+      <div id="restaurant" class="restaurant"></div>
       <div id="likeButtonContainer"></div>
         `;
   },
@@ -22,7 +22,7 @@ const Detail = {
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
       restaurant: {
         id: restaurant.id,
-        name: restaurant.title,
+        name: restaurant.name,
         description: restaurant.description,
         pictureId: restaurant.pictureId,
         address: restaurant.address,
