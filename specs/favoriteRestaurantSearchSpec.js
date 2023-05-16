@@ -52,9 +52,9 @@ describe('Searching Restaurants', () => {
       });
 
       favoriteRestaurants.searchRestaurants.withArgs('film a').and.returnValues([
-        { id: 111, title: 'film abc' },
-        { id: 222, title: 'ada juga film abcde' },
-        { id: 333, title: 'ini juga boleh film a' },
+        { id: 111, name: 'film abc' },
+        { id: 222, name: 'ada juga film abcde' },
+        { id: 333, name: 'ini juga boleh film a' },
       ]);
 
       searchRestaurants('film a');
@@ -71,9 +71,9 @@ describe('Searching Restaurants', () => {
       });
 
       favoriteRestaurants.searchRestaurants.withArgs('film a').and.returnValues([
-        { id: 111, title: 'film abc' },
-        { id: 222, title: 'ada juga film abcde' },
-        { id: 333, title: 'ini juga boleh film a' },
+        { id: 111, name: 'film abc' },
+        { id: 222, name: 'ada juga film abcde' },
+        { id: 333, name: 'ini juga boleh film a' },
       ]);
 
       searchRestaurants('film a');

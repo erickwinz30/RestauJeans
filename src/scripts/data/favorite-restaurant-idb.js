@@ -35,15 +35,15 @@ const FavoriteRestaurantIdb = {
 
   // eslint-disable-next-line no-unused-vars, no-empty-function
   async searchRestaurants(query) {
-    return this.getAllRestaurants()
-      .filter((restaurant) => {
-        const loweredCaseRestaurantTitle = ((restaurant && restaurant.name) || '-').toLowerCase();
-        const jammedRestaurantTitle = loweredCaseRestaurantTitle.replace(/\s/g, '');
-        const loweredCaseQuery = query.toLowerCase();
-        const jammedQuery = loweredCaseQuery.replace(/\s/g, '');
-        // eslint-disable-next-line eqeqeq
-        return jammedRestaurantTitle.indexOf(jammedQuery) != -1;
-      });
+    return (await this.getAllRestaurants()).filter((restaurant) => {
+      const loweredCaseRestaurantTitle = (restaurant.name || '-').toLowerCase();
+      const jammedRestaurantTitle = loweredCaseRestaurantTitle.replace(/\s/g, '');
+
+      const loweredCaseQuery = query.toLowerCase();
+      const jammedQuery = loweredCaseQuery.replace(/\s/g, '');
+
+      return jammedRestaurantTitle.indexOf(jammedQuery) !== -1;
+    });
   },
 };
 
