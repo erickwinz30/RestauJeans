@@ -60,6 +60,8 @@ body {
 }
 
 .nav {
+  position: relative; /* Add position relative */
+  z-index: 2; /* Add a higher z-index value */
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -93,42 +95,54 @@ body {
 }
 
 .hero {
-  display: flex;
-  align-items: center;
-  min-height: 380px;
+  position: relative;
   width: 100%;
   text-align: center;
-  background-image: url("../public/images/heros/hero-image_2.jpg");
   background-position: center;
-  background-color: green;
 }
 
 .hero_inner {
-  margin: 0 auto;
-  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
 }
 
 .hero_title {
   color: black;
-  text-shadow:
-    -1px -1px 0 #fff,
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff,
-    1px 1px 0 #fff;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
   font-weight: 500;
   font-size: 36px;
 }
 
 .hero_desc {
   color: black;
-  text-shadow:
-    -1px -1px 0 #fff,
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff,
-    1px 1px 0 #fff;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
   margin-top: 16px;
   font-size: 18px;
   font-weight: 300;
+  max-width: 90%;
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+.hero_img {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero_img img {
+  display: block;
+  height: 380px;
+  width: 100%;
+  object-fit: cover;
 }
 
 main {
@@ -333,8 +347,4 @@ footer {
   color: #fff;
   min-width: 44px;
   min-height: 44px;
-}
-
-img {
-  display: block;
 }

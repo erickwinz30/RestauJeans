@@ -1,6 +1,8 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import '../styles/responsive.css';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 import App from './view/app';
 import swRegister from './utils/sw-register';
 
@@ -22,8 +24,7 @@ window.addEventListener('load', () => {
   swRegister();
 });
 
-skipToContent.addEventListener('keypress', (event) => {
-  if (event.key === 'Enter') {
-    maincontent.focus();
-  }
+skipToContent.addEventListener('click', (event) => {
+  event.preventDefault();
+  maincontent.focus();
 });

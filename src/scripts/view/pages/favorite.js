@@ -19,7 +19,8 @@ const Favorite = {
     const restaurantContainer = document.querySelector('#posts');
     restaurants.forEach((restaurant) => {
       console.log(restaurant);
-      restaurantContainer.innerHTML += createRestaurantItemTemplate(restaurant);
+      const restaurantItem = createRestaurantItemTemplate(restaurant);
+      restaurantContainer.innerHTML += restaurantItem;
     });
   },
 };

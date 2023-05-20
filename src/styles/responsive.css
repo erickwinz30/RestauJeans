@@ -163,13 +163,12 @@
 }
 
 @media screen and (min-width: 1200px) {
-    .hero {
+    .hero_img {
         display: flex;
         align-items: center;
         min-height: 380px;
         width: 1200px;
         text-align: center;
-        background-image: url("../public/images/heros/hero-image_2.jpg");
         background-position: center;
         background-color: green;
         margin: 0 auto;

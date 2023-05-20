@@ -3,14 +3,14 @@ import CONFIG from '../../globals/config';
 const createRestaurantItemTemplate = (restaurant) => `
     <div class="restaurant-item">
     <div class="restaurant-item_header">
-    <img class="restaurant-item_header_poster" alt="${restaurant.name}"
-        src="${CONFIG.BASE_IMAGE_SMALL_URL + restaurant.pictureId}">
+    <img class="restaurant-item_header_poster lazyload" alt="${restaurant.name}"
+        data-src="${CONFIG.BASE_IMAGE_SMALL_URL + restaurant.pictureId}">
     <div class="restaurant-item_header_rating">
         <p>⭐️<span class="restaurant-item_header_rating_score">${restaurant.rating}</span></p>
     </div>
     </div>
     <div class="restaurant-item_content">
-    <h3><a href="/#/detail/${restaurant.id}">${restaurant.name}</a></h3>
+    <h3 class="restaurant_title"><a href="/#/detail/${restaurant.id}">${restaurant.name}</a></h3>
     <p>${restaurant.description}</p>
     </div>
     </div>
